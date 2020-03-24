@@ -1,17 +1,16 @@
-(function () {
+(function() {
+  var global = global || this || window || Function('return this')();
+  var nx = global.nx || require('@feizheng/next-js-core2');
 
-  var global = global || this || self || window;
-  var nx = global.nx || require('next-js-core2');
-
-  nx.pairs = function (inObject) {
-    return nx.map(inObject,function(key,value){
-      return { key: key, value: value };
+  nx.pairs = function(inObject) {
+    var res = [];
+    nx.forIn(inObject, function(key, value) {
+      res.push({ key: key, value: value });
     });
+    return res;
   };
-
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = nx.pairs;
   }
-
-}());
+})();
