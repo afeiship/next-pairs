@@ -1,6 +1,9 @@
 # next-pairs
 > Object key value to pairs for next.
 
+## redirect
+- git@github.com:afeiship/next-pick-pairs.git
+
 ## installation
 ```bash
 npm install -S @feizheng/next-pairs
