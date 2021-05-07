@@ -1,6 +1,6 @@
-(function() {
-  var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+(function () {
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
+  var nx = global.nx || require('@jswork/next');
 
   nx.pairs = function(inObject) {
     var res = [];
